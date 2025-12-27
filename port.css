@@ -1,5 +1,11 @@
-/* Center logo inside header */
-/* Header base */
+/* ===== GLOBAL ===== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== HEADER ===== */
 #main-header {
     position: fixed;
     top: 0;
@@ -9,107 +15,180 @@
     background: #446e96;
     display: flex;
     align-items: center;
-    transition: all 0.3s ease; /* smooth movement */
     z-index: 1000;
     box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.1);
-
 }
 
-
-
-
-
-/* Layout inside header */
 .icon-area {
     width: 100%;
     display: flex;
-    justify-content: center;
-    padding: 20px 20px;
-    border-width: 2px;
-    border-bottom: #fff;
-    
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
 }
 
-/* Logo resize animation */
 .icon {
     transition: all 0.3s ease;
-    padding-right: 300px;
-    padding-top: 15px;
+    padding-left: 100px;
 }
 
-/* Navigation style */
+/* ===== NAVIGATION ===== */
 nav ul {
     list-style: none;
     display: flex;
     gap: 40px;
-    padding: 20px;
-    padding-right: 100px;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: 600;
-    font-size: large;
+    font-size: 18px;
+}
+
+/* ===== HERO SECTION ===== */
+.parent {
+    display: flex;
+    align-items: center;
+    background-color: #446e96;
+    min-height: 100vh;
+    width: 100%;
     padding-top: 20px;
 }
 
-/* Parent container */
-.parent {
-    display: flex;                  /* side by side */
-    align-items: center;            /* vertical center */
-    background-color: #446e96;
-    min-height: 700px;
-    padding: 0px;
-    margin: 0px;
-    width: 100%;
-}
-body {
-    margin: 0;
-    padding: 0;
-}
-
-
-/* Left & right equal width */
-.left, .right {
+.left,
+.right {
     flex: 1;
 }
 
-/* Image responsive */
-.left img {
-    max-width: 80%;
-    height: 400px;
-    justify-content: center;
-    margin-left: 280px;
-    margin-top: 80px;
-    border-radius: 80px;
-    border: solid;
-    align-items: center;
-}
-
-/* Heading styling */
-#head1 {
-    text-transform: uppercase;
-    font-size: 36px;
-    font-weight: 800;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #fff;
-    line-height: 1.3;
-}feDiffuseLighting
-
-/* Highlight word */
-#head1 span.s1 {
-    color: #ffd700;
-}
-#s2 {
-    color: rgb(255, 255, 255);
-    text-decoration: underline;
-    text-decoration-color: #ffd700;
-}
-
-/* Optional: text alignment */
 .right {
     text-align: left;
 }
 
+/* ===== IMAGE ===== */
+.left img {
+    width: 440px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 40px;
+    border: solid;
+    display: block;
+    margin: 0 auto;
+}
 
+/* ===== TEXT ===== */
+#head1 {
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.3;
+}
+
+#head1 .s1 {
+    color: #ffd700;
+}
+
+#head1 #s2 {
+    color: #ffd700;
+    text-decoration: underline;
+    text-decoration-color: #ffd700;
+}
+
+.s3 {
+    color: #fff;
+}
+
+#p1 {
+    color: #fff;
+    font-size: 18px;
+    padding-right: 20px;
+    line-height: 25px;
+    font-weight: 10;
+    font-style: italic;
+}
+
+/* ===== TABLET & MOBILE ===== */
+@media (max-width: 768px) {
+
+    #main-header {
+        height: auto;
+        padding: 10px 10px;
+    }
+
+    .icon-area {
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 10px;
+    }
+    .icon{
+        padding-left: 50px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .parent {
+        flex-direction: column;
+        text-align: center;
+        padding: 120px 20px 40px;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+
+    .left img {
+        width: 100%;
+        max-width: 300px;
+        height: 300px;
+        margin-bottom: 15px;
+        margin-top: 80px;
+
+    }
+
+    #head1 {
+        font-size: 26px;
+        margin-left: 15px;
+    }
+
+    #p1 {
+        font-size: 15px;
+       
+        margin-left: 20px;
+    }
+    h3.s3 {
+        margin-left: 25px;
+    }
+    #p1{
+        font-weight: bold;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+  
+}
+
+/* ===== SMALL MOBILE ===== */
+@media (max-width: 480px) {
+
+    #head1 {
+        font-size: 22px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .left img {
+        max-width: 250px;
+    }
+}
