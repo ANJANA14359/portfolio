@@ -1,67 +1,146 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="port.css">
+
+    <title>Anjana Lokesh</title>
 </head>
+
 <body>
-    <div class="container">
-        <header id="main-header" data-height-onload="80"data-height-loaded="true" data-fixed-height-onload="80">
-           <div  class="container clearfix et_menu_container" ></div>
-            <div class="icon-area">
-              <img src="images/logo.png" width="322px" height="68px" class="icon" >
-              <div class="pages">
-                <nav>
-                   <ul>
-                     <li id="menu-item1"><a href="#">Websites</a></li>
-                     <li><a href="#">Blogs</a></li>
-                     <li><a href="#">Results</a></li>
-                   </ul>
-                </nav>
-              </div> 
+
+<header id="main-header">
+    <div class="icon-area">
+        <img src="images/logo.png" class="icon" alt="Logo">
+
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Websites</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">Results</a></li>
+            </ul>
+
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
             </div>
-        </header>
+
+            <div class="drop-down">
+                <a href="#">Websites</a>
+                <a href="#">Blogs</a>
+                <a href="#">Results</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="parent">
+    <div class="left">
+        <img src="images/profile.png" alt="Profile Picture">
         
     </div>
-            <div id="main-content">
-            
-               <div class="parent">
-                       <div class="left">
-                          <img src="images/profile pic.jpg" alt="My prfile pic">
-                       </div>
 
-                       <div class="right">
-                          <h2 id="head1">
-                                I BUILD <span class="s1">WEBSITES & DIGITAL </span>  <br>
-                                <span class="s1">STRATEGIES</span> THAT DELIVER REAL <span id="s2">BUSINESS OUTCOMES</span>
-                          </h2>
-                          <h3 class="s3">
-                            (AND I CAN HELP YOU TO GROW)
-                          </h3>
-                          <p id="p1">Whether you’re a business owner or a brand builder, it’s time to stop thinking about just 
-                            having a website and start focusing on real business growth. If your website isn’t generating leads, 
-                            your digital marketing isn’t bringing qualified traffic, or your online presence isn’t converting visitors
-                             into customers, then it’s time for us to talk.</p>
-                      </div>
-             </div>
+    <div class="right">
+        <h2 id="head1">
+            I Build <span class="s1">Websites & Digital</span><br>
+            <span class="1">strategies</span> that Deliver Real
+            <span id="s2">Business Outcomes</span>
+        </h2>
 
+        <h3 class="s3">(& I CAN HELP YOU TO GROW)</h3>
 
-               <div class="about-us">
-
-            </div>
-            <div class="Gallery">
-
-            </div>
-        </div>
-        <footer>
-
-        </footer>
-            
-            
-
-        </div>
+        <p id="p1">
+            Whether you’re a business owner or a brand builder, it’s time to stop
+            thinking about just having a website and start focusing on real business growth.
+        </p>
     </div>
+</section>
+
+
+<!-- ABOUT -->
+ <div class="about">
+    <h2 class="ab1"h2>ABOUT</h2>
+    <h3 id="dg">
+        Web Developer | Digital Marketer | Freelancer
+    </h3 >
+    <p id="p2"><i>"Iam a Digital Marketer focused on driving real <span class="hg">business growth</span>. I handle <span class="hg">website designing and analysis, competitive research, growth strategies, SEO, GMB optimization, creative video edits, and poster designs—helping</span> brands scale with clarity and impact."</i></p>
+ </div>
+
+ <!-- CLIENTS IMAGE -->
+<div class="clients">
+    <img src="images/clients.png" alt="clients">
+</div>
+
+<div>
+    <h2 class="heading1">MY SERVICES</h2>
+</div>
+
+<!-- CARDS SECTION -->
+<section class="content">
+    
+
+    <div class="card">
+        <div><img src="" ></div>
+        <H3 class="c1">Website Development</H3>
+        <p>Content text goes here...</p>
+    </div>
+    <div class="card">
+        <div><img src="" ></div>
+        <H3 class="c1">SEO</H3>
+        <p>Content text goes here...</p>
+    </div>
+
+    <div class="card">
+        <div><img src="" ></div>
+        <H3 class="c1">Blog writings</H3>
+        <p>Content text goes here...</p>
+    </div>
+
+    <div class="card">
+        <div><img src="" ></div>
+        <H3 class="c1">Social Media</H3>
+        <p>Content text goes here...</p>
+    </div>
+
+    
+</section>
+<section class="content">
+    <div class="card">
+        <div><img src="" ></div>
+        <H3 class="c1">Professional Video Generation</H3>
+        <p>Content text goes here...</p>
+    </div>
+
+    <div class="card">
+        <div><img src="" ></div>
+        <H3 class="c1">Eye Catching Posters</H3>
+        <p>Content text goes here...</p>
+    </div>
+
+    <div class="card">
+        <div><img src="" ></div>
+        <H3 class="c1">competitive Research</H3>
+        <p>Content text goes here...</p>
+    </div>
+
+    <div class="card">
+        <div><img src="" ></div>
+        <H3 class="c1">Digital Analytics</H3>
+        <p>Content text goes here...</p>
+    </div>
+</section>
+<script>
+    const toggleBtn = document.querySelector('.toggle_btn');
+    const dropdown = document.querySelector('.drop-down');
+
+    toggleBtn.addEventListener('click', () => {
+        dropdown.classList.toggle('open');
+    });
+</script>
+
 </body>
 </html>
